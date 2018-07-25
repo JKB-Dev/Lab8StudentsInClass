@@ -33,7 +33,7 @@ public class StudentsInClass {
 					throw new ArrayIndexOutOfBoundsException();
 				}
 			} catch (ArrayIndexOutOfBoundsException e) {
-				System.out.print("Please enter a number between 1 and 20!");
+				System.out.println("Please enter a number between 1 and 20!");
 				continue;
 
 			} catch (InputMismatchException e) {
@@ -45,6 +45,8 @@ public class StudentsInClass {
 			
 			System.out.println("Student " + userNum + " is " + names[userNum - 1]);
 
+			while (cont.equalsIgnoreCase("y")) {
+			
 			try {
 				System.out.println("What would you like to know about " + names[userNum - 1] + "?");
 
@@ -64,6 +66,8 @@ public class StudentsInClass {
 
 			} catch (IllegalArgumentException f) {
 				System.out.println("Please choose \"hometown\" or \"favorite food\"! ");
+				continue;
+			}
 			}
 			
 			System.out.println("Would you like to know more? (y/n): ");
