@@ -45,7 +45,6 @@ public class StudentsInClass {
 			
 			System.out.println("Student " + userNum + " is " + names[userNum - 1]);
 
-			while (cont.equalsIgnoreCase("y")) {
 			
 			try {
 				System.out.println("What would you like to know about " + names[userNum - 1] + "?");
@@ -66,8 +65,7 @@ public class StudentsInClass {
 
 			} catch (IllegalArgumentException f) {
 				System.out.println("Please choose \"hometown\" or \"favorite food\"! ");
-				continue;
-			}
+				//continue;
 			}
 			
 			System.out.println("Would you like to know more? (y/n): ");
